@@ -10,6 +10,10 @@
             <li v-for="item in shoppingList">{{ item }}</li>
         </ol>
         
+        <p>What's your favorite color?</p>
+            <input v-model="color" type="text">
+        <p>Your favorite color is... {{ color }}</p>
+        
     </div>
     
     <script src="https://unpkg.com/vue"></script>
@@ -24,7 +28,8 @@
                 "eggs",
                 "steak",
                 "chicken"
-            ]
+            ],
+            color: '' // two way data binding
         }
     });
     </script>
