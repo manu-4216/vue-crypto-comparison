@@ -14,6 +14,8 @@
             <input v-model="color" type="text">
         <p>Your favorite color is... {{ color }}</p>
         
+        <input type="button" v-on:click="capitalizeColor" value="Capitalize">
+        
     </div>
     
     <script src="https://unpkg.com/vue"></script>
@@ -30,6 +32,11 @@
                 "chicken"
             ],
             color: '' // two way data binding
+        },
+        methods: {
+            capitalizeColor: function () {
+                this.color = this.color.toUpperCase();
+            }
         }
     });
     </script>
