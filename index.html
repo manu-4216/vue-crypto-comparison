@@ -1,20 +1,32 @@
 <html>
-  <body>
+<body>
     <div id="app">
-      <h1>{{ message }}</h1>
-      <p v-if="secretMessage">This is a secret HTML element</p>
-      <p v-else>Welcome to the website</p>
+        <h1>{{ message }}</h1>
+        <p v-if="secretMessage">This is a secret HTML element</p>
+        <p v-else>Welcome to the website</p>
+        
+        <p>Shopping list</p>
+        <ol>
+            <li v-for="item in shoppingList">{{ item }}</li>
+        </ol>
+        
     </div>
-
+    
     <script src="https://unpkg.com/vue"></script>
     <script>
-      let app = new Vue({
+    let app = new Vue({
         el: "#app",
         data: {
-          message: "Hi!",
-          secretMessage: false // Try to change in the browser app.secretMessage
+            message: "Hi!",
+            secretMessage: false, // Try to change in the browser app.secretMessage
+            shoppingList: [
+                "milk",
+                "eggs",
+                "steak",
+                "chicken"
+            ]
         }
-      });
+    });
     </script>
-  </body>
+</body>
 </html>
