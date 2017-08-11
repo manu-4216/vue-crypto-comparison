@@ -4,6 +4,7 @@ h1 {
 
 td img {
     width: 25px;
+    min-width: 25px;
 }
 
 .jumbotron p {
